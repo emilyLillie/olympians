@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+#execution point, run this file to use the program
 
 require './lib/olympians'
 
