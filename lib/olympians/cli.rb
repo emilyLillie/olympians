@@ -10,8 +10,7 @@ class Olympians
   end 
   
   def alphabetical_gods
-    #Olympians::Gods.all_gods
-    puts "trying 1"
+    Olympians::Gods.numbered_gods
   end 
   
   def prompt_input
@@ -31,6 +30,7 @@ class Olympians
         when "5"
           puts "Zeus's symbols and whatever"
         when "exit"
+          puts "Thanks for stopping by!"
           exit
         else 
           puts "I'm sorry, I don't know what you mean. Please type 1 through 5 or exit."
