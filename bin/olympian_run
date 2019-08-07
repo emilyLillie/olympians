@@ -3,5 +3,8 @@
 
 require './lib/olympians'
 
+#require_relative "./olympians/version"
+#require_relative './olympians/cli'
+
 Olympians::CLI.new.greeting
 

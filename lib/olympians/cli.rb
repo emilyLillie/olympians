@@ -1,3 +1,5 @@
+require_relative '../olympians/gods'
+
 class Olympians
   class CLI 
   
@@ -8,11 +10,8 @@ class Olympians
   end 
   
   def alphabetical_gods
-    puts "1. Aphrodite"
-    puts "2. Ares"
-    puts "3. Athena"
-    puts "4. Hades"
-    puts "5. Zeus"
+    #Olympians::Gods.all_gods
+    puts "trying 1"
   end 
   
   def prompt_input
@@ -31,6 +30,8 @@ class Olympians
           puts "Hades's symbols and whatever"
         when "5"
           puts "Zeus's symbols and whatever"
+        when "exit"
+          exit
         else 
           puts "I'm sorry, I don't know what you mean. Please type 1 through 5 or exit."
       end
