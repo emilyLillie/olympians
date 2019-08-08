@@ -4,13 +4,16 @@ class Olympians
   class CLI 
   
   def greeting 
-    puts "Here are the Top 5 Olympian Gods:"
     alphabetical_gods
     prompt_input
   end 
   
   def alphabetical_gods
-    Olympians::Gods.numbered_gods
+    puts "Here are the Top 5 Olympian Gods:"
+    @gods = Olympians::Gods.gods_objects
+    @gods.each.with_index(1) do |god, i|
+      puts "#{i}. #{god.name}"
+    end
   end 
   
   def prompt_input
@@ -20,15 +23,15 @@ class Olympians
       input = gets.strip
       case input 
         when "1"
-          puts "Aphrodite's symbols and whatever"
+          puts @gods[0]
         when "2"
-          puts "Ares's symbols and whatever"
+          puts @gods[1]
         when "3"
-          puts "Athena's symbols and whatever"
+          puts @gods[2]
         when "4"
-          puts "Hades's symbols and whatever"
+          puts @gods[3]
         when "5"
-          puts "Zeus's symbols and whatever"
+          puts @gods[4]
         when "exit"
           puts "Thanks for stopping by!"
           exit

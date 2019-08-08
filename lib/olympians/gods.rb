@@ -5,7 +5,7 @@ class Olympians
     @@all = []
     
     def self.numbered_gods
-      god_1.name
+      puts "1. Aphrodite"
       puts "2. Ares"
       puts "3. Athena"
       puts "4. Hades"
@@ -13,7 +13,7 @@ class Olympians
     end 
       
     def self.gods_objects  
-      god_1 = self.new 
+      god_1 = Gods.new 
       god_1.name = "Aphrodite"
       god_1.symbols = "symbols"
       god_1.description = "of love"
@@ -41,7 +41,9 @@ class Olympians
       god_5.name = "Zeus"
       god_5.symbols = "symbols"
       god_5.description = "of lighting"
-      god_5.url = "wtv"     
+      god_5.url = "wtv"    
+      
+      [god_1, god_2, god_3, god_4, god_5]
     end
     
     
