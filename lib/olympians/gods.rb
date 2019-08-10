@@ -1,23 +1,28 @@
+require "nokogiri"
+require 'open-uri'
+
 class Olympians
   class Gods
     
     attr_accessor :name, :symbols, :description, :url
-    @@all = []
     
-    def self.numbered_gods
-      puts "1. Aphrodite"
-      puts "2. Ares"
-      puts "3. Athena"
-      puts "4. Hades"
-      puts "5. Zeus"
-    end 
+    # def self.numbered_gods
+    #   puts "1. Aphrodite"
+    #   puts "2. Ares"
+    #   puts "3. Athena"
+    #   puts "4. Hades"
+    #   puts "5. Zeus"
+    # end 
       
     def self.gods_objects  
+      
+      doc = Nokogiri::HTML(open("https://greekgodsandgoddesses.net/goddesses/aphrodite/"))
+      
       god_1 = Gods.new 
-      god_1.name = "Aphrodite"
+      god_1.name = doc.search("h1.entry-title").text.strip
       god_1.symbols = "symbols"
       god_1.description = "of love"
-      god_1.url = "wtv"
+      god_1.url = "https://greekgodsandgoddesses.net/goddesses/aphrodite/"
     
       god_2 = self.new 
       god_2.name = "Ares"
