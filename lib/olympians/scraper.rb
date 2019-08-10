@@ -20,24 +20,30 @@ class Olympians
       god_2.symbols = ares_doc.search("tr.row-6 td.column-2").text.strip
       god_2.rules = ares_doc.search("tr.row-3 td.column-2").text.strip
       god_2.url = "https://greekgodsandgoddesses.net/gods/ares/"   
+      athena_doc = Nokogiri::HTML(open("https://greekgodsandgoddesses.net/goddesses/athena/"))
       
-      god_3 = self.new 
-      god_3.name = "Athena"
-      god_3.symbols = "symbols"
-      god_3.rules = "of hunter"
-      god_3.url = "wtv"  
+      god_3 = Gods.new 
+      god_3.name = athena_doc.search("h1.entry-title").text.strip
+      god_3.symbols = athena_doc.search("tr.row-6 td.column-2").text.strip
+      god_3.rules = athena_doc.search("tr.row-3 td.column-2").text.strip
+      god_3.url = "https://greekgodsandgoddesses.net/goddesses/athena/"
       
-      god_4 = self.new 
-      god_4.name = "Hades"
-      god_4.symbols = "symbols"
-      god_4.rules = "of death"
-      god_4.url = "wtv"  
       
-      god_5 = self.new 
-      god_5.name = "Zeus"
-      god_5.symbols = "symbols"
-      god_5.rules = "of lighting"
-      god_5.url = "wtv"    
+      hades_doc = Nokogiri::HTML(open("https://greekgodsandgoddesses.net/gods/hades/"))
+      
+      god_4 = Gods.new 
+      god_4.name = hades_doc.search("h1.entry-title").text.strip
+      god_4.symbols = hades_doc.search("tr.row-5 td.column-2").text.strip
+      god_4.rules = hades_doc.search("tr.row-3 td.column-2").text.strip
+      god_4.url = "https://greekgodsandgoddesses.net/gods/hades/" 
+      
+      zeus_doc = Nokogiri::HTML(open("https://greekgodsandgoddesses.net/gods/zeus/"))
+      
+      god_5 = Gods.new 
+      god_5.name = zeus_doc.search("h1.entry-title").text.strip
+      god_5.symbols = zeus_doc.search("tr.row-6 td.column-2").text.strip
+      god_5.rules = zeus_doc.search("tr.row-3 td.column-2").text.strip
+      god_5.url = "https://greekgodsandgoddesses.net/gods/zeus" 
       
       [god_1, god_2, god_3, god_4, god_5]
     end
