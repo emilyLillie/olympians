@@ -25,23 +25,23 @@ class Olympians
         when "1"
           puts "Greek Name: " + @gods[0].name
           puts "Symbols: " + @gods[0].symbols
-          puts "Introduction: " + @gods[0].description
+          puts "Rules Over: " + @gods[0].rules
         when "2"
           puts "Greek Name: " + @gods[1].name
           puts "Symbols: " + @gods[1].symbols
-          puts "Introduction: " + @gods[1].description
+          puts "Rules Over: " + @gods[1].rules
         when "3"
           puts "Greek Name: " + @gods[2].name
           puts "Symbols: " + @gods[2].symbols
-          puts "Introduction: " + @gods[2].description
+          puts "Rules Over: " + @gods[2].rules
         when "4"
           puts "Greek Name: " + @gods[3].name
           puts "Symbols: " + @gods[3].symbols
-          puts "Introduction: " + @gods[3].description
+          puts "Rules Over: " + @gods[3].rules
         when "5"
           puts "Greek Name: " + @gods[4].name
           puts "Symbols: " + @gods[4].symbols
-          puts "Introduction: " + @gods[4].description
+          puts "Rules Over: " + @gods[4].rules
         when "exit"
           puts "Thanks for stopping by!"
           exit
