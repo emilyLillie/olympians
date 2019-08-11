@@ -18,7 +18,7 @@ class Olympians
   end 
   
   def prompt_input
-    input = "nil" #stub while loop
+    input = "nil"
     while input != "exit"
       puts "Type in the number of the god you want to learn more about, or exit"
       input = gets.strip
@@ -26,6 +26,7 @@ class Olympians
       if input.to_i > 0 
         selected_god = @gods[input.to_i - 1]
           puts "Greek Name: " + "#{selected_god.name}"
+          puts "Roman Name: " + "#{selected_god.roman_name}"
           puts "Symbols: " + "#{selected_god.symbols}"
           puts "Rules Over: " + "#{selected_god.rules}"
       elsif input == "exit"

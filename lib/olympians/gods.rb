@@ -1,7 +1,7 @@
 
 class Olympians
   class Gods  
-   attr_accessor :name, :symbols, :rules, :url
+   attr_accessor :name, :roman_name, :symbols, :rules
     
     def self.scraped_gods
       self.gods_objects
