@@ -1,19 +1,8 @@
-# require "open-uri"
-# require "nokogiri"
 
 class Olympians
   class Scraper
-    
-    def self.gods_objects  
-      # gods = []
-      # gods << self.scrape_aphrodite
-      # gods << self.scrape_ares
-      # gods << self.scrape_artemis
-      # gods << self.scrape_hades
-      # gods << self.scrape_zeus
-    # end
-    
-    # def self.scrape_aphrodite
+   
+    def self.scrape_aphrodite
       
       aphro_doc = Nokogiri::HTML(open("https://greekgodsandgoddesses.net/goddesses/aphrodite/"))
       
@@ -22,10 +11,11 @@ class Olympians
       god_1.symbols = aphro_doc.search("tr.row-6 td.column-2").text.strip
       god_1.rules = aphro_doc.search("tr.row-3 td.column-2").text.strip
       god_1.url = "https://greekgodsandgoddesses.net/goddesses/aphrodite/"
+      god_1
       
-    # end
+    end
     
-    # def self.scrape_ares
+    def self.scrape_ares
     
       ares_doc = Nokogiri::HTML(open("https://greekgodsandgoddesses.net/gods/ares/"))
       
@@ -34,10 +24,11 @@ class Olympians
       god_2.symbols = ares_doc.search("tr.row-6 td.column-2").text.strip
       god_2.rules = ares_doc.search("tr.row-3 td.column-2").text.strip
       god_2.url = "https://greekgodsandgoddesses.net/gods/ares/"   
+      god_2
       
-    # end
+    end
     
-    # def self.scrape_artemis
+    def self.scrape_artemis
       
       athena_doc = Nokogiri::HTML(open("https://greekgodsandgoddesses.net/goddesses/athena/"))
       
@@ -46,10 +37,11 @@ class Olympians
       god_3.symbols = athena_doc.search("tr.row-6 td.column-2").text.strip
       god_3.rules = athena_doc.search("tr.row-3 td.column-2").text.strip
       god_3.url = "https://greekgodsandgoddesses.net/goddesses/athena/"
+      god_3
       
-    # end
+    end
     
-    # def self.scrape_hades
+    def self.scrape_hades
       
       hades_doc = Nokogiri::HTML(open("https://greekgodsandgoddesses.net/gods/hades/"))
       
@@ -58,10 +50,11 @@ class Olympians
       god_4.symbols = hades_doc.search("tr.row-5 td.column-2").text.strip
       god_4.rules = hades_doc.search("tr.row-3 td.column-2").text.strip
       god_4.url = "https://greekgodsandgoddesses.net/gods/hades/" 
+      god_4
       
-    # end
+    end
     
-    # def self.scrape_zeus
+    def self.scrape_zeus
       
       zeus_doc = Nokogiri::HTML(open("https://greekgodsandgoddesses.net/gods/zeus/"))
       
@@ -70,11 +63,9 @@ class Olympians
       god_5.symbols = zeus_doc.search("tr.row-6 td.column-2").text.strip
       god_5.rules = zeus_doc.search("tr.row-3 td.column-2").text.strip
       god_5.url = "https://greekgodsandgoddesses.net/gods/zeus" 
+      god_5
       
-    # end 
-      
-      [god_1, god_2, god_3, god_4, god_5]
-    end
+    end 
     
   end
 end 
