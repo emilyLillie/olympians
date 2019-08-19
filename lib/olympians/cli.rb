@@ -11,7 +11,7 @@ class Olympians
   
   def alphabetical_gods
     puts "Here are the Top 5 Olympian Gods:"
-    @gods = Olympians::Gods.scraped_gods
+    @gods = Olympians::Gods.gods_objects
     @gods.each.with_index(1) do |god, i|
       puts "#{i}. #{god.name}"
     end

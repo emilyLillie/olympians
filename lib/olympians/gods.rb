@@ -3,9 +3,6 @@ class Olympians
   class Gods  
    attr_accessor :name, :roman_name, :symbols, :rules
     
-    def self.scraped_gods
-      self.gods_objects
-    end 
     
     def self.gods_objects  
       gods = []
