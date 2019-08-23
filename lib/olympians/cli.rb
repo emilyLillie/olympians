@@ -1,6 +1,6 @@
 require_relative '../olympians/gods'
 require_relative '../olympians/scraper'
-require 'pry'
+# require 'pry'
 class Olympians
   class CLI 
   
@@ -10,7 +10,7 @@ class Olympians
   end 
   
   def alphabetical_gods
-    puts "Here are the Top 5 Olympian Gods:"
+    puts "Here are the 15 Olympian Gods:"
     @gods ||= Olympians::Gods.gods_objects
     @gods.each.with_index(1) do |god, i|
       puts "#{i}. #{god.name}"
